@@ -1,3 +1,6 @@
+
+delete from artist;
+select * from artist;
 insert into rating_of_musicians.artist values 
 (1,"XXXTENTATION","Jahseh","Onfroy","2000-06-15","Male");
 select * from rating_of_musicians.artist;
@@ -17,3 +20,9 @@ select * from rating_of_musicians.artist;
 
 delete from artist where idArtist =3; 
 select * from artist;
+
+LOAD DATA INFILE 'info.txt' INTO TABLE artist FIELDS TERMINATED BY ','
+ENCLOSED BY '"'
+LINES TERMINATED BY '\r\n';
+select * from artist;
+
